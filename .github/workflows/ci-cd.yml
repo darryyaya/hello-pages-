@@ -1,0 +1,57 @@
+name: CI/CD to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate HTML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f index.html || (echo "❌ index.html missing" && exit 1)
+          test -f about.html || (echo "❌ about.html missing" && exit 1)
+          test -f projects.html || (echo "❌ projects.html missing" && exit 1)
+          test -f contacts.html || (echo "❌ contacts.html missing" && exit 1)
+          test -f css/style.css || (echo "❌ css/style.css missing" && exit 1)
+          test -f js/main.js || (echo "❌ js/main.js missing" && exit 1)
+          echo "✅ Все файлы на месте"
+      - name: Validate HTML structure
+        run: |
+          for f in *.html; do
+            grep -q "<!DOCTYPE html>" "$f" || (echo "❌ $f: нет DOCTYPE" && exit 1)
+            grep -q "</html>" "$f" || (echo "❌ $f: нет </html>" && exit 1)
+            echo "✅ $f валиден"
+          done
+
+  deploy:
+    name: Deploy to Pages
+    needs: validate
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
