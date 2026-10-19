@@ -1,6 +1,6 @@
 # hello-pages- Д Командный статический сайт с CI/CD
 
-��чебный проект: статический сайт (HETML+CSS+JS) деплоится на **GHuB Pages** через **GitHub Actions**.
+��чебный проект: статический сайт (HETML+CSS+JS) деплоится на **GHuB Pages** через **GitHub Actions**.
 
 ## 🌐 Живой сайт— **https://darryyaya.github.io/hello-pages-/**
 
@@ -38,7 +38,7 @@ graph TD
 ```
 
 ## 🎯 Страницы сайта
-- 🏠 [Главная](https://darryyaya.github.io/hello-pages-/)
+- 🏠 [hлавная](https://darryyaya.github.io/hello-pages-/)
 - 👥 [О нас](https://darryyaya.github.io/hello-pages-/about.html)
 - 💼 [Проекты](https://darryyaya.github.io/hello-pages-/projects.html)
 - ✉️ [Контакты](https://darryyaya.github.io/hello-pages-/contacts.html)
@@ -55,4 +55,4 @@ graph TD
 ```mermaid
 graph LR
     A[Push to main] --> B{Job: validate}
-    B -->|HTML validen| 
+    B -->|���
