@@ -2,10 +2,39 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>hello-pages-</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello-pages- — Главная</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>hello-pages-</h1>
-    <p>Проект в разработке</p>
+    <header class="site-header">
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">🚀 hello-pages-</a>
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link nav__link--active">Главная</a></li>
+                <li><a href="about.html" class="nav__link">О нас</a></li>
+                <li><a href="projects.html" class="nav__link">Проекты</a></li>
+                <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1 class="hero__title">Добро пожаловать!</h1>
+        <p class="hero__subtitle">Командный проект с CI/CD на GitHub Pages</p>
+    </section>
+    <main class="container">
+        <section class="section">
+            <h2 class="section__title">О проекте</h2>
+            <p>Учебный статический сайт команды из 4 человек. Автоматически деплоится на GitHub Pages при каждом push в <code>main</code>.</p>
+        </section>
+        <section class="section">
+            <h2 class="section__title">Технологии</h2>
+            <p>HTML5 · CSS3 · JavaScript · GitHub Actions · GitHub Pages</p>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>© 2026 Команда hello-pages- · Сделано с ❤️</p>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
