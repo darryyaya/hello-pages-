@@ -18,16 +18,37 @@
             </ul>
         </nav>
     </header>
+
     <main class="container">
         <section class="section">
             <h2 class="section__title">Проекты команды</h2>
-            <ul id="projects-list">
-                <li class="project-card"><h3>Go CLI</h3><p>Публикация бинарников в GitHub Releases</p></li>
-                <li class="project-card"><h3>Go GUI</h3><p>Fyne + MSYS2 + 3 раннера</p></li>
-                <li class="project-card"><h3>hello-pages-</h3><p>Деплой на GitHub Pages через CI/CD</p></li>
-            </ul>
+            <p class="section__subtitle">Всё, что мы делаем — открыто и автоматизировано.</p>
+
+            <div class="grid">
+                <div class="project-card card reveal">
+                    <span class="card__icon">⚙️</span>
+                    <h3>Go CLI</h3>
+                    <p>Публикация бинарников в GitHub Releases через CI.</p>
+                </div>
+                <div class="project-card card reveal">
+                    <span class="card__icon">🖥️</span>
+                    <h3>Go GUI</h3>
+                    <p>Fyne + MSYS2 + 3 раннера для кроссплатформенных сборок.</p>
+                </div>
+                <div class="project-card card reveal">
+                    <span class="card__icon">🌐</span>
+                    <h3>hello-pages-</h3>
+                    <p>Деплой статического сайта на GitHub Pages через CI/CD.</p>
+                </div>
+                <div class="project-card card reveal">
+                    <span class="card__icon">🔧</span>
+                    <h3>Actions Toolkit</h3>
+                    <p>Набор переиспользуемых workflow для авто-релизов.</p>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer class="site-footer"><p>© 2026 Команда hello-pages-</p></footer>
     <script src="js/main.js"></script>
 </body>

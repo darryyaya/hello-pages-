@@ -18,23 +18,44 @@
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h1 class="hero__title">Добро пожаловать!</h1>
-        <p class="hero__subtitle">Командный проект с настоящим CI/CD 🚀</p>
-    </section>
+
     <main class="container">
-        <section class="section">
-            <h2 class="section__title">О проекте</h2>
-            <p>Учебный статический сайт команды из 4 человек. Автоматически деплоится на GitHub Pages при каждом push в <code>main</code>.</p>
+        <section class="hero">
+            <span class="hero__badge">✨ Деплой через CI/CD</span>
+            <h1 class="hero__title">Современные проекты<br>на GitHub Pages</h1>
+            <p class="hero__text">
+                Мы собираем Go CLI, GUI на Fyne и веб-приложения.
+                Публикуем бинарники в Releases и автоматизируем деплой — всё в одном месте.
+            </p>
+            <div class="hero__actions">
+                <a href="projects.html" class="btn btn--primary">Смотреть проекты</a>
+                <a href="about.html" class="btn btn--ghost">О команде</a>
+            </div>
         </section>
+
         <section class="section">
-            <h2 class="section__title">Технологии</h2>
-            <p>HTML5 · CSS3 · JavaScript · GitHub Actions · GitHub Pages</p>
+            <h2 class="section__title">Что мы делаем</h2>
+            <div class="grid">
+                <div class="card reveal">
+                    <span class="card__icon">⚙️</span>
+                    <h3>Go CLI</h3>
+                    <p>Консольные утилиты с публикацией бинарников в GitHub Releases.</p>
+                </div>
+                <div class="card reveal">
+                    <span class="card__icon">🖥️</span>
+                    <h3>Go GUI</h3>
+                    <p>Кроссплатформенные интерфейсы на Fyne, MSYS2 и трёх раннерах.</p>
+                </div>
+                <div class="card reveal">
+                    <span class="card__icon">🌐</span>
+                    <h3>Веб-деплой</h3>
+                    <p>Статические сайты на GitHub Pages с автоматической сборкой.</p>
+                </div>
+            </div>
         </section>
     </main>
-    <footer class="site-footer">
-        <p>© 2026 Команда hello-pages- · Сделано с ❤️</p>
-    </footer>
+
+    <footer class="site-footer"><p>© 2026 Команда hello-pages-</p></footer>
     <script src="js/main.js"></script>
 </body>
 </html>
